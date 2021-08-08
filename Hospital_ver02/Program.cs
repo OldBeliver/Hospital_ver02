@@ -57,7 +57,7 @@ namespace Hospital_ver02
                     case "3":
                         Console.WriteLine($"Cортировка по диагнозу");
                         Console.Write($"Введите заболевание: ");
-                        string diagnosis = Console.ReadLine();
+                        string diagnosis = Console.ReadLine().ToLower();
                         filtered = _patients.Where(patient => patient.Diagnosis == diagnosis);
                         break;
                     case "4":
