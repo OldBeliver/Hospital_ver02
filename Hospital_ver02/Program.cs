@@ -94,7 +94,7 @@ namespace Hospital_ver02
 
         private string DrawLine(int length)
         {
-            string line = "-";
+            char line = '-';
             string bigLine = "";
             for (int i = 0; i < length; i++)
             {
@@ -106,11 +106,11 @@ namespace Hospital_ver02
 
     class Creator
     {
-        private static Random _rand;
+        private static Random _random;
 
         static Creator()
         {
-            _rand = new Random();
+            _random = new Random();
         }
 
         public Creator()
@@ -129,7 +129,7 @@ namespace Hospital_ver02
             string lastPart = "Цин";
             int caseCount = 9;
 
-            switch (_rand.Next(caseCount))
+            switch (_random.Next(caseCount))
             {
                 case 0:
                     firstPart = "Петр";
@@ -160,7 +160,7 @@ namespace Hospital_ver02
                     break;
             }
 
-            switch (_rand.Next(caseCount))
+            switch (_random.Next(caseCount))
             {
                 case 0:
                     lastPart = "ов";
@@ -199,7 +199,7 @@ namespace Hospital_ver02
             int minAge = 18;
             int maxAge = 100;
 
-            int age = _rand.Next(minAge, maxAge);
+            int age = _random.Next(minAge, maxAge);
             return age;
         }
 
@@ -208,7 +208,7 @@ namespace Hospital_ver02
             int caseCount = 5;
             string diagnosis = "без диагноза";
 
-            switch (_rand.Next(caseCount))
+            switch (_random.Next(caseCount))
             {
                 case 0:
                     diagnosis = "чума";
